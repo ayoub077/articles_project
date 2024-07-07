@@ -1,0 +1,61 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+header {
+	background-color:black;
+	color:#fff;
+	padding:10PX;
+	/*font-size:PX;*/
+}
+header > div{
+	display:inline-block;
+}
+
+header ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	/*background-color:red;*/
+	/*width:100%;*/
+	margin-left:500px;
+	/*margin-left:20%;*/
+}
+
+header ul li{
+	display:inline;
+}
+
+header ul .settings{
+	margin-left:550PX;
+	position:relative;
+}
+
+.settings{
+	/*position:relative;*/
+}
+
+ul .dropdown-menu-settings{
+	position:absolute;
+	/*display:block;*/
+	right:-20PX;
+	color:#fff;
+	background-color:black;
+	padding:15PX;
+	display:none;
+}
+
+ul .dropdown-menu-settings li{
+	display:block;
+	/*background-color:grey;*/
+
+}
+
+ul .settings:hover .dropdown-menu-settings{
+	display:block;
+}
+
+ul .dropdown-menu-settings li:hover{
+	background-color:grey;
+}
