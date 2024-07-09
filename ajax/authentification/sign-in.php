@@ -23,10 +23,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			$get = $stmt->fetch();
 			$count = $stmt->rowCount();
 
+			echo $count;
+
 			if($count){
 				$_SESSION["userid"] = $get["userid"];
 				$_SESSION["username"] = $username;
-				header("location: index.php"); exit();
+				// header("location: index.php"); exit();
 			}else{
 				echo "this user not exist!";
 			}

@@ -51,7 +51,7 @@ if(SITE_STATUS == true){
 	<div>
 
 		<!-- <form action="<?php //echo $_SERVER['PHP_SELF'] ?>" method="POST"> -->
-
+			<div id="show"></div>
 			<div>
 				<label></label>
 				<input type="text" id="username" >
