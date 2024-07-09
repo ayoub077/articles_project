@@ -1,0 +1,15 @@
+$(document).ready(function(){
+	$("#btn").click(function(){
+		$.ajax({
+			type:"post",
+			url:"ajax/authentification/sign-in.php",
+			data:{
+				username:$("#username").val(),
+				password:$("#password").val()
+			},
+			success:function(data){
+				console.log(data);
+			}
+		});
+	});
+});
