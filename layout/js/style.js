@@ -13,7 +13,9 @@ $(document).ready(function(){
 				console.log(data);
 
 				if(data != 1){$("#show").html(data)}
-				else{$("#show").html(data)}
+				// if(data == 1){$("#show").html(data);}
+				if(data == 1){location.href = "index.php";}
+			
 
 			}
 		});
@@ -21,6 +23,7 @@ $(document).ready(function(){
 });
 
 // ajax for page sign-up.php
+
 
 $(document).ready(function(){
 	$("#sign_up_btn").click(function(){
@@ -36,6 +39,21 @@ $(document).ready(function(){
 
 			success:function(data){
 				console.log(data);
+
+				if(data != 1){
+					$("#show_sign_up").html(data)
+					// $("#show").html(data)
+				}else{
+
+					$("#show_sign_up").html("<h1>welcome! you've registred with success</h1>");
+
+					setTimeout(function(){
+						"use strict";
+
+						location.href = "sign-in.php";
+
+					}, 4000);
+				}
 			}
 		});
 	})

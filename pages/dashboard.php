@@ -9,7 +9,7 @@ include "../includes/navbar.php";
 <h1>dashboard page</h1>
 <div>
     <?php
-    $stmt = $con->prepare("select * from posts where user_id = ?");
+    $stmt = $con->prepare("SELECT * from posts where user_id = ?");
     $stmt->execute(array($_SESSION["userid"]));
     $results = $stmt->fetchAll();
     $count = $stmt->rowCount();
@@ -18,10 +18,12 @@ include "../includes/navbar.php";
     // echo $count;
 
     if($count){
-        echo "success";
+        // echo "success";
+
+        foreach($results as $result){echo $result["title"] . "<br>" . $result['content'] ;}
     }
 
-    foreach($results as $result){echo $result["title"];}
+
     ?>
 </div>
 <?php

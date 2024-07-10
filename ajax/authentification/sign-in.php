@@ -1,5 +1,7 @@
 <?php 
 
+session_start();
+
 include "../../config.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
@@ -29,9 +31,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 				$_SESSION["userid"] = $get["userid"];
 				$_SESSION["username"] = $username;
 				// header("location: index.php"); exit();
+				// $status = "enter"; echo $status;
 			}else{
 				echo "this user not exist!";
 			}
+
 		}
 
 	}

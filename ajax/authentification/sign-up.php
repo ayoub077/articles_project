@@ -57,9 +57,10 @@ include "../../config.php";
 							"zpassword" => $hashedpass));
 							$count = $stmt->rowCount();
 
-							if($count){
-								header("location: sign-in.php"); exit();
-							}
+							echo $count;
+							// if($count){
+							// 	header("location: sign-in.php"); exit();
+							// }
 						}
 					}
 				
