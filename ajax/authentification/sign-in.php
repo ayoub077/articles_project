@@ -6,8 +6,9 @@ include "../../config.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
-		$username = $_POST["username"];
-		$password = $_POST["password"];
+		$username 	= filter_var($_POST["username"], FILTER_SANITIZE_STRING);
+		$password 	= filter_var($_POST["password"], FILTER_SANITIZE_STRING);
+		
 		$hashedpass = sha1($password);
 
 		$formerrors = array();
@@ -16,7 +17,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		if(empty($password)){$formerrors[] = "please enter password";}
 
 		if(!empty($formerrors)){
-			foreach($formerrors as $error){echo $error . "<br>";}
+			foreach($formerrors as $error){
+				echo "<p class='error'>", $error, "</p>", exit();
+			}
 		}
 		else{
 
@@ -25,15 +28,15 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			$get = $stmt->fetch();
 			$count = $stmt->rowCount();
 
-			echo $count;
-
 			if($count){
 				$_SESSION["userid"] = $get["userid"];
 				$_SESSION["username"] = $username;
+
+				echo $count;
+
 				// header("location: index.php"); exit();
-				// $status = "enter"; echo $status;
 			}else{
-				echo "this user not exist!";
+				echo "<p class='error'>username or password incorrect!<p>";
 			}
 
 		}

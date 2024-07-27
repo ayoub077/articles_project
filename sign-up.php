@@ -5,6 +5,8 @@ session_start();
 define("SITE_STATUS", true);
 
 if(SITE_STATUS == true){
+	$path_css = "../../layout/css/style.css";
+	include "includes/templates/header.php";
 
 	if(isset($_SESSION["username"])){
 		header("location: index.php"); exit();
@@ -12,43 +14,46 @@ if(SITE_STATUS == true){
 
 ?>
 
-	<div>
+
+
+	<div class="page-sign-up">
 
 		
 		<div id="show_sign_up"></div>
-		<div>
-			<label>username</label>
-			<input type="text" id="username">
-		</div>
+		<div class="child-containner">
+			<div id="errors" class="errors"></div>
+			<div class="form-sign-up">
+				<div>
+					<label>username</label>
+					<input type="text" id="username" placeholder="USERNAME">
+				</div>
+				<div>
+					<label>email</label>
+					<input type="Email" id="email" placeholder="EMAIL">
+				</div>
+				<div>
+					<label>password</label>
+					<input type="password" id="password" placeholder="PASSWORD">
+				</div>
+				<div>
+					<label>confirm-password</label>
+					<input type="password" id="re_password" placeholder="CONFIRM PASSWORD">
+				</div>
 
-		<div>
-			<label>email</label>
-			<input type="text" id="email">
-		</div>
+				<div class="have"><a href="sign-in.php">you have an account?</a></div>
 
-		<div>
-			<label>password</label>
-			<input type="password" id="password">
+				<div>
+					<input type="submit" id="sign_up_btn" value="sign-up">
+				</div>
+			</div>
 		</div>
-            
-        <div>
-			<label>re-password</label>
-			<input type="password" id="re_password">
-		</div>
-
-		<div><a href="sign-in.php">you have an account?</a></div>
-
-		<div>
-			<input type="submit" id="sign_up_btn">
-		</div>
-
 		
 
 	</div>
 
 <?php 
 
-	include "includes/footer.php";
+	include "includes/templates/footer.php";
 	
 } else{echo "site closed for maintenance!";}
 

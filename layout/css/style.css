@@ -1,13 +1,16 @@
 body{
 	margin:0;
 	padding:0;
+	min-height:100vh;
 }
 
 header {
+	margin:0px;
 	background-color:black;
 	color:#fff;
 	padding:10PX;
-	/*font-size:PX;*/
+	position:fixed;
+	width:100%;
 }
 header > div{
 	display:inline-block;
@@ -17,10 +20,7 @@ header ul{
 	margin:0;
 	padding:0;
 	list-style:none;
-	/*background-color:red;*/
-	/*width:100%;*/
 	margin-left:500px;
-	/*margin-left:20%;*/
 }
 
 header ul li{
@@ -33,13 +33,12 @@ header ul .settings{
 }
 
 .settings{
-	/*position:relative;*/
 }
 
 ul .dropdown-menu-settings{
 	position:absolute;
-	/*display:block;*/
 	right:-20PX;
+	top:15PX;
 	color:#fff;
 	background-color:black;
 	padding:15PX;
@@ -48,8 +47,11 @@ ul .dropdown-menu-settings{
 
 ul .dropdown-menu-settings li{
 	display:block;
-	/*background-color:grey;*/
+}
 
+ul .dropdown-menu-settings a{
+	color:#fff;
+	text-decoration:none;
 }
 
 ul .settings:hover .dropdown-menu-settings{
@@ -57,5 +59,402 @@ ul .settings:hover .dropdown-menu-settings{
 }
 
 ul .dropdown-menu-settings li:hover{
-	background-color:grey;
+	text-decoration:underline;
+}
+
+.ul1 .settings a{
+	color:#fff;
+	text-decoration: none;
+}
+
+/*end style of header*/
+
+.clear{
+	clear:both;
+}
+
+/*start style of container_body page index /////////////////////////////////////////////////*/
+
+.container_body{
+}
+
+.container_body .articles{
+	width:60%;
+	padding: 50PX 30PX;
+	margin-top:70PX;
+}
+
+.container_body .articles .essay{
+	border: 1px solid orange;
+	width: 80%;
+	padding: 10px 30PX 30PX 30px;
+	margin-bottom:30PX;
+	background-color: #E9EDC9;
+}
+
+.container_body .articles .comments{
+	background-color: #EDEDE9;
+	width: 80%;
+	margin:0 8% 0 2%;
+	padding:10PX;
+}
+
+.container_body > div{
+	float:left;
+	box-sizing:border-box;
+}
+
+.container_body .sidebar{
+	width:30%;
+	border:1px solid black;
+	border-radius: 5px;
+	position:fixed;
+	right:5%;
+	padding: 0 30PX 30PX 30PX;
+	margin-top:120px;
+	margin-left:5%;
+	height:450PX;
+}
+.container_body .sidebar section{
+	width: 98%;
+	margin:auto;
+	background-color: #faedcd;
+	background-color: #F8F9FA;
+	height:400px;
+	margin-top:15PX;
+	border-radius: 10PX;
+}
+
+.container_body .sidebar section h1{
+	text-align: center;
+	padding-top:15PX;
+}
+
+.container_body .sidebar section div{
+	padding: 0 20PX 20PX 20PX;
+	color: #00B4D8;
+}
+/*end style of container_body page index //////////////////////////////////////////////////////*/
+
+/*start style of page posts add //////////////////////////////////////////////////*/
+
+.page-posts-add{
+	padding-top:70PX;
+}
+
+.page-posts-add h1{
+	padding-left:40%;
+	text-transform: capitalize;
+}
+
+.page-posts-add form{
+	margin:30px 200PX;
+	font-size: 20PX;
+}
+
+.page-posts-add form label, .page-posts-add form input{
+	margin:10PX;
+}
+
+.page-posts-add form div{
+	float: left;
+	margin:10px 20PX;
+}
+
+.page-posts-add form div > input{
+	padding: 7PX;
+}
+
+.page-posts-add form label, .page-posts-add form input{
+	display: block;
+}
+
+.page-posts-add form input[type="submit"]{
+	background-color: #008CBA;
+	border:none;
+	padding:5PX;
+	color:#fff;
+	min-width:50PX;
+	border-radius: 3PX;
+	font-size: 14PX;
+}
+
+/*end style of page posts add //////////////////////////////////////////////////*/
+
+/*start style of page posts //////////////////////////////////////////////////*/
+
+.posts-add{
+	padding: 60px 20PX 20PX 20PX;
+}
+.posts-add .add-post{
+	color:#fff;
+	background-color: blue;
+	text-align: center;
+	padding: 1.5PX;
+	width:100PX;
+	border-radius: 10PX;
+	margin-bottom: 10PX;
+}
+
+.posts-add .add-post a{
+	color: #fff;
+	text-decoration:none;
+}
+
+.posts-add .essay{
+	border: 1px solid orange;
+	width: 80%;
+	padding: 10px 30PX 30PX 30px;
+	margin-bottom:30PX;
+	background-color: #E9EDC9;
+}
+
+.posts-add .essay .buttons{
+	margin-top:30PX;
+}
+
+.posts-add .essay .buttons button{
+	background-color: #33A3E1;
+	border:none;
+	padding:5PX;
+	width:50PX;
+	border-radius: 5PX;
+}
+
+.posts-add .essay .buttons .delete{
+	background-color: #D14833; 
+	color:black;
+}
+
+.posts-add .essay .buttons button a{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+/*end style of page posts /////////////////////////////////////////////////*/
+
+/*start style of page posts edit /////////////////////////////////////////////////*/
+
+.page-posts-edit{
+	padding-top:50PX;
+	text-align: center;
+}
+
+.page-posts-edit form div{
+	margin-bottom:10PX;
+}
+
+.page-posts-edit form label{
+	font-size: 25PX;
+	margin-right:10PX;
+}
+
+.page-posts-edit form input[name="title"]{
+	padding:10PX;
+}
+
+.page-posts-edit form input[type="submit"]{
+	background-color: #33A3E1;
+	border:none;
+	padding:5PX;
+	width:50PX;
+	border-radius: 5PX;
+	color: #fff;
+	cursor:pointer;
+}
+
+/*end style of page posts edit /////////////////////////////////////////////////*/
+
+/*start style of page posts read /////////////////////////////////////////////////*/
+
+.page-posts-read{
+	padding:30PX 10PX;
+}
+
+.page-posts-read h1{
+	margin-left:35%;
+}
+
+.page-posts-read p{
+	/*text-align: center;*/
+}
+
+/*end style of page posts read /////////////////////////////////////////////////*/
+
+/*start page dashboard ////////////////////////////////////////////////////////////*/
+
+.page-dashboard{
+	padding: 20PX;
+}
+
+.page-dashboard h1{
+	margin-top:25PX;
+	margin-left:35%;
+}
+
+.page-dashboard .new-article{
+	background-color: #007BFF;
+	width:100PX;
+	padding:2PX;
+	text-align: center;
+	border-radius: 3PX;
+}
+
+.page-dashboard .new-article a{
+	text-decoration: none;
+	color: #fff;
+
+}
+
+.page-dashboard .dashboard{
+	background-color: #A3B18A;
+	width:70%;
+	margin:auto;
+	padding:2% 0% 2% 5%;
+	padding-left:5%;
+}
+
+.page-dashboard .dashboard > div{
+	display: inline-block;
+	border: 1px solid;
+	background-color: #A4AC86;
+	width: 25%;
+	margin-right:10PX;
+	padding: 10PX;
+}
+
+/*end dashboard page /////////////////////////////////////////////////////////////////*/
+
+/*start style of page sign-up//////////////////////////////////////////////////////////*/
+
+.page-sign-up .child-containner{
+	width:30%;
+	margin:100px auto;
+}
+.page-sign-up .form-sign-up{
+	box-shadow:1PX 1PX 1PX 2px;
+	padding:20PX;
+	background-color: #FDFFFC;
+}
+
+.page-sign-up input{
+	padding:10PX;
+}
+
+.form-sign-up label{
+	width:80PX;
+	padding: 10PX;
+	text-transform:capitalize;
+}
+
+.form-sign-up > div{
+	margin-bottom: 7PX;
+}
+
+.form-sign-up div > * {
+	display: inline-block;
+}
+
+.form-sign-up .have{
+	margin-left:180PX;
+}
+
+.form-sign-up .have a{
+	color: green;
+}
+.form-sign-up input[type="submit"]{
+	background-color: #BDBDBD;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	text-transform:capitalize;
+}
+
+.page-sign-up .form-sign-up input[placeholder]{	
+	letter-spacing:1.5PX;
+}
+
+#errors{
+	color:red;
+	background-color: #F8D7DA;
+	margin-bottom: 10PX;
+}
+
+.error{
+	padding: 10px;
+}
+
+#show_sign_up{
+	color:green;
+	margin:10PX 25%;
+}
+/*end style of page sign-up//////////////////////////////////////////////////////////*/
+
+/*start style of page sign-in//////////////////////////////////////////////////////////*/
+
+.form-cadre{
+	width:30%;
+	margin:100px auto;
+}
+.form-style{
+	box-shadow:1PX 1PX 1PX 2px;
+	padding:20PX;
+	background-color: #FDFFFC;
+}
+
+.form-style input{
+	padding:10PX;
+}
+
+.form-style label{
+	width:80PX;
+	padding: 10PX;
+	text-transform:capitalize;
+}
+
+.form-style > div{
+	margin-bottom: 7PX;
+}
+
+.form-style input[type="submit"]{
+	background-color: #BDBDBD;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.form-style input[placeholder]{
+	letter-spacing:1.5PX;
+}
+
+.form-style .have{
+	margin-left:110PX;
+}
+
+.form-style .have a{
+	color: green;
+}
+
+/*end style of page sign-in//////////////////////////////////////////////////////////*/
+/*start style of footer//////////////////////////////////////////////////////////*/
+
+footer{
+	background-color: black;
+	color: #fff;
+	position:sticky;
+	top:100%;
+	padding:1PX;
+}
+
+footer div{
+	margin:auto;
+	width:15%;
+	text-align:center;
+}
+
+footer div p span{
+	font-style:italic;
+	text-decoration:underline;
+	text-transform: capitalize;
 }

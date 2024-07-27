@@ -12,9 +12,9 @@ $(document).ready(function(){
 			success:function(data){
 				console.log(data);
 
-				if(data != 1){$("#show").html(data)}
+				if(data != 1){$("#errors").html(data)}
 				// if(data == 1){$("#show").html(data);}
-				if(data == 1){location.href = "index.php";}
+				if(data == 1){location.href = "posts.php";}
 			
 
 			}
@@ -41,8 +41,8 @@ $(document).ready(function(){
 				console.log(data);
 
 				if(data != 1){
-					$("#show_sign_up").html(data)
-					// $("#show").html(data)
+					// $("#show_sign_up").html(data)
+					$("#errors").html(data)
 				}else{
 
 					$("#show_sign_up").html("<h1>welcome! you've registred with success</h1>");
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 						location.href = "sign-in.php";
 
-					}, 4000);
+					}, 3000);
 				}
 			}
 		});
