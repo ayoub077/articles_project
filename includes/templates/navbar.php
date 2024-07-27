@@ -14,6 +14,7 @@
 						settings
 						<ul class="dropdown-menu-settings">
 							<li><a href="dashboard.php">dashbord</a></li>
+							<li><a href="posts.php">posts</a></li>
 							<li><a href="profile.php">profile</a></li>
 							<li><a href="logout.php">logout<a></li>
 						</ul>
